@@ -289,7 +289,7 @@ billing$ave.flow <- billing$water.cons/billing$days
 
 max.date <- max(billing$read.date)
 day(max.date) <- 1
-min.date <- as.Date("2014-09-01")
+min.date <- as.Date(billing$prev.date)
 day(min.date) <- 1
 months <- seq.Date(min.date, max.date, by = "months")
 months <- strftime(months, format = "%B.%Y")
