@@ -17,7 +17,7 @@ options(scipen = 9999)
 copy <- function(x) {
   write.table(x, "clipboard", sep="\t", row.names = F) 
 } #Used to very quickly copy dataframes to paste into excel.
-runs.zero <-   function(x, select = T) { 
+runs.zero <-   function(x, select = 0L) { 
   runs <- rle(x) 
   with(runs, max(lengths[values == select], 0)) 
 }
