@@ -159,7 +159,7 @@ calc.chk <- billing[billing$water.cons != billing$calc.cons, ]
 calc.chk <- calc.chk[!is.na(calc.chk$calc.cons),] 
 # Note that this section can be susceptable to floating point error if the values are very close.
 
-write.csv(temp, paste(plot.dir, "\\calc_check.csv", sep = ""))
+write.csv(calc.chk, paste(plot.dir, "\\calc_check.csv", sep = ""))
 
 ##### Negative Reads ----------
 neg <- billing[billing$water.cons < 0 & billing$audit == T,] 
